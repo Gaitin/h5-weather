@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>天气</title>
+    <script src="js/flexble.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/idangerous.swiper.css">
+    <link rel="stylesheet" href="css/idangerous.swiper.3dflow.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="app">
+        <div class="mainweather">
+            <ul >
+                <li class="line1">
+                    <div class="inline maintime float-left">
+                        <span>尾号限行:</span>
+                        <span id="carlimit">3和5</span>
+                    </div>
+                    <div class="inline float-right">
+                        <span class="mainplace">北京</span>
+                        <!--<span>[切换]</span>-->
+                    </div>
+                </li>
+                <li >
+                    <div class="tem-wendubox" >
+                        <span class="dushu" id="nowtem">0
+                            <div class="dushudian">°</div>
+                        </span>
+
+                    </div>
+                    <!--<span>[{{basic.update.loc}}]</span>-->
+                </li>
+                <li class="tem_level">
+                    <div class="tem-center">
+                        <div class="inline icheight">
+                            <div class="iconwm">
+                                <div class="iconw"></div>
+                            </div>
+                            <div class="icont" id="nowstatus">多云</div>
+                            <!--<div class="icont">{{now.cond.txt}}</div>-->
+                        </div>
+                        <span class="tem-wendu"><span id="lowtem">0</span>°/ <span id="heighttem">0</span>°</span>
+                    </div>
+                </li>
+                <li class="tem_bottom">
+                    <div class="inline float-left">
+                        <span class="margin—right-kongqi">空气质量：<span id="ntemqulity">良</span></span>
+                        <span>PM2.5：<span id="pm25">0</span></span>
+                    </div>
+                    <div class="inline float-right">
+                        相对湿度：<span id="ntwet">0</span>%
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="div-line"></div>
+        <div class="hourlytime">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper" id="hourlytime">
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>15时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-sun"></div></li>-->
+                            <!--<li>2°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>16时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-cloud"></div></li>-->
+                            <!--<li>10°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>17时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-sun"></div></li>-->
+                            <!--<li>2°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>18时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-cloud"></div></li>-->
+                            <!--<li>10°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>19时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-sun"></div></li>-->
+                            <!--<li>2°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>20时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-cloud"></div></li>-->
+                            <!--<li>10°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>21时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-sun"></div></li>-->
+                            <!--<li>2°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>22时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-cloud"></div></li>-->
+                            <!--<li>10°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>23时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-sun"></div></li>-->
+                            <!--<li>2°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>24时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-cloud"></div></li>-->
+                            <!--<li>10°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>01时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-sun"></div></li>-->
+                            <!--<li>2°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>02时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-cloud"></div></li>-->
+                            <!--<li>10°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>03时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-sun"></div></li>-->
+                            <!--<li>2°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>04时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-cloud"></div></li>-->
+                            <!--<li>10°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<div class="swiper-slide">-->
+                        <!--<ul class="w-icon-ul">-->
+                            <!--<li>05时</li>-->
+                            <!--<li><div class="w-icon-li w-icon-sun"></div></li>-->
+                            <!--<li>2°</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="div-line"></div>
+        <div class="futureday1">
+            <ul class="flex fdbox" id="canlist1">
+                <!--<li class="flex-1">-->
+                    <!--<ul class="fdboxb">-->
+                        <!--<li >今天</li>-->
+                        <!--<li class=""><span class="fdimg fdimg-1"></span></li>-->
+                        <!--<li class="">小雪</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="flex-1">-->
+                    <!--<ul class="fdboxb">-->
+                        <!--<li >星期二</li>-->
+                        <!--<li class=""><span class="fdimg fdimg-2"></span></li>-->
+                        <!--<li class="">小雪</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="flex-1">-->
+                    <!--<ul class="fdboxb">-->
+                        <!--<li >星期三</li>-->
+                        <!--<li class=""><span class="fdimg fdimg-1"></span></li>-->
+                        <!--<li class="">大雪</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="flex-1">-->
+                    <!--<ul class="fdboxb">-->
+                        <!--<li >星期四</li>-->
+                        <!--<li class=""><span class="fdimg fdimg-1"></span></li>-->
+                        <!--<li class="">大雨</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="flex-1">-->
+                    <!--<ul class="fdboxb">-->
+                        <!--<li >星期五</li>-->
+                        <!--<li class=""><span class="fdimg fdimg-1"></span></li>-->
+                        <!--<li class="">小雪</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            </ul>
+            <canvas id="canvass" width="1500" height="900"></canvas>
+            <ul class="flex fdbox" id="canlist2">
+                <!--<li class="flex-1">-->
+                    <!--<ul class="fdboxb">-->
+                        <!--<li class=""><span class="fdimg fdimg-1"></span></li>-->
+                        <!--<li class>晴</li>-->
+                        <!--<li class>11/22</li>-->
+                        <!--<li class>北风</li>-->
+                        <!--<li class>4-5级</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="flex-1">-->
+                    <!--<ul class="fdboxb">-->
+                        <!--<li class=""><span class="fdimg fdimg-1"></span></li>-->
+                        <!--<li class>晴</li>-->
+                        <!--<li class>11/22</li>-->
+                        <!--<li class>北风</li>-->
+                        <!--<li class>4-5级</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="flex-1">-->
+                    <!--<ul class="fdboxb">-->
+                        <!--<li class=""><span class="fdimg fdimg-1"></span></li>-->
+                        <!--<li class>晴</li>-->
+                        <!--<li class>11/22</li>-->
+                        <!--<li class>北风</li>-->
+                        <!--<li class>4-5级</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="flex-1">-->
+                    <!--<ul class="fdboxb">-->
+                        <!--<li class=""><span class="fdimg fdimg-1"></span></li>-->
+                        <!--<li class>晴</li>-->
+                        <!--<li class>11/22</li>-->
+                        <!--<li class>北风</li>-->
+                        <!--<li class>4-5级</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="flex-1">-->
+                    <!--<ul class="fdboxb">-->
+                        <!--<li class=""><span class="fdimg fdimg-1"></span></li>-->
+                        <!--<li class>晴</li>-->
+                        <!--<li class>11/22</li>-->
+                        <!--<li class>北风</li>-->
+                        <!--<li class>4-5级</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        <div class="div-line"></div>
+        <div class="futureday">
+            <table id="futuretable">
+                <!--<tr>-->
+                    <!--<td>星期五</td>-->
+                    <!--<td><div class="fu-icon fu-icon-1"></div></td>-->
+                    <!--<td>-->
+                        <!--<span>11°</span>-->
+                        <!--<span>5°</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>星期六</td>-->
+                    <!--<td><div class="fu-icon fu-icon-2"></div></td>-->
+                    <!--<td>-->
+                        <!--<span>11°</span>-->
+                        <!--<span>5°</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>星期日</td>-->
+                    <!--<td><div class="fu-icon fu-icon-1"></div></td>-->
+                    <!--<td>-->
+                        <!--<span>10°</span>-->
+                        <!--<span>7°</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>星期一</td>-->
+                    <!--<td><div class="fu-icon fu-icon-1"></div></td>-->
+                    <!--<td>-->
+                        <!--<span>12°</span>-->
+                        <!--<span>5°</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                    <!--<td>星期二</td>-->
+                    <!--<td><div class="fu-icon fu-icon-1"></div></td>-->
+                    <!--<td>-->
+                        <!--<span>11°</span>-->
+                        <!--<span>6°</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+            </table>
+        </div>
+        <div class="div-line"></div>
+        <div class="ads">
+            <img src="img/ads/01.png" alt="">
+        </div>
+        <div class="xinzuo">
+            <div class="xinzuo_title">星座运势</div>
+            <div class="div-line"></div>
+            <div class="swiper-container featured">
+                    <div class="swiper-wrapper" id="xinzuo">
+                        <div class="swiper-slide" id="firstslider">
+                            <div class="h-icon h-icon1" flag="1"></div>
+                        </div >
+                        <div class="swiper-slide" >
+                            <div class="h-icon h-icon2" flag="2"></div>
+                        </div >
+                        <div class="swiper-slide" >
+                            <div class="h-icon h-icon3" flag="3"></div>
+                        </div >
+                        <div class="swiper-slide" >
+                            <div class="h-icon h-icon4" flag="4"></div>
+                        </div >
+                        <div class="swiper-slide" >
+                            <div class="h-icon h-icon5" flag="5"></div>
+                        </div >
+                        <div class="swiper-slide" >
+                            <div class="h-icon h-icon6" flag="6"></div>
+                        </div >
+                        <div class="swiper-slide" >
+                            <div class="h-icon h-icon7" flag="7"></div>
+                        </div >
+                        <div class="swiper-slide" >
+                            <div class="h-icon h-icon8" flag="8"></div>
+                        </div >
+                        <div class="swiper-slide" >
+                            <div class="h-icon h-icon9" flag="9"></div>
+                        </div >
+                        <div class="swiper-slide" >
+                            <div class="h-icon h-icon10" flag="10"></div>
+                        </div >
+                        <div class="swiper-slide" >
+                            <div class="h-icon h-icon11" flag="11"></div>
+                        </div >
+                        <div class="swiper-slide" >
+                            <div class="h-icon h-icon12" flag="12"></div>
+                        </div >
+                    </div>
+            </div>
+            <div class="xinzuotext">
+                <div class="prag">
+                    受伤了的爱情有望重新开始，但曾经的伤痛让你难以释怀，一切顺其自然吧；想要理财却尚无理财经验的人可多看看与财经、投资、理财相关的书籍、资讯，从中获得一些基本知识和概念；作业本上老师好的评语，让你对那堂课充满了学习热情。
+                </div>
+
+            </div>
+            <div class="starbox">
+                <table >
+                    <tr>
+                        <td>
+                            <div class="start">综合指数</div>
+                            <div class="starmain star-0"></div>
+                        </td>
+                        <td>
+                            <div>健康指数</div>
+                            <div>60%</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="start">爱情指数</div>
+                            <div class="starmain star-1"></div>
+                        </td>
+                        <td>
+                            <div>幸运颜色</div>
+                            <div>白色</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="start">工作指数</div>
+                            <div class="starmain star-2"></div>
+                        </td>
+                        <td>
+                            <div>幸运数字</div>
+                            <div>6</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="start">财运指数</div c>
+                            <div class="starmain star-3"></div>
+                        </td>
+                        <td>
+                            <div>速配Q友</div>
+                            <div>巨蟹座</div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="div-line"></div>
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+        <div class="joke">
+            <div class="joke_title">每日一笑</div>
+            <div class="div-line"></div>
+            <div class="joke-content">
+                两人吃饭，桌上放着一碗芥末。其中一个认为是甜的，舀了满满一勺放进嘴里，立即泪如泉涌。不过他紧闭嘴巴没说一句话。朋友问怎么了。他说：想我爹了，20年前的今天他上吊了。朋友安慰了他。也舀了满满一勺放进嘴里，骤然泪如雨下。第一位佯装地问：你怎么也哭了？朋友说：你爹死的好惨啊。
+            </div>
+        </div>
+
+    </div>
+
+
+
+<script src="js/zepto.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/idangerous.swiper.min.js"></script>
+<script src="js/idangerous.swiper.3dflow-2.0.js"></script>
+<script src="js/canvas.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

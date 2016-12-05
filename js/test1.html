@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>雪花飘啊飘</title>
+</head>
+<style>
+    * {margin:0; padding:0; vertical-align:top;}
+    .xue{position:absolute;color:#fff;}
+</style>
+<body>
+<div id="bbb"
+     style="position:absolute;top:0px;right:0px;width:400px;border:1px #000 solid;background:#fff;z-index:9;height:30px;">
+</div>
+<div id="box"
+     style="height:600px;position:relative;border:1px red solid;background:#000;overflow:hidden;">
+</div>
+<div
+        style="position:absolute;top:0px;right:400px;border:1px #000 solid;background:#fff;width:400px;height:30px;z-index:5;">
+    <input id="wind_id" value="10" />级风
+    <input id="wind_button" type=button value="雪花飘啊飘飘啊飘" />
+</div>
+<script>
+    var box = document.getElementById("box");
+    var i= 0,c,d,wind_time;
+    var all = 0,other = 0,wind=0;
+    box.style.width = '1000px';
+    document.getElementById("wind_button").onclick = function(){
+        clearTimeout(wind_time);wind = 0;
+        wind = parseInt(document.getElementById("wind_id").value);
+        wind_run(wind);
+    }
+    function gogo(){
+        var a = document.createElement("div");
+        a.innerHTML = '.';
+        a.id = "xue" + i;
+        a.className = "xue";
+        a.style.top = parseInt(box.style.height) * (Math.random() > 0.3 ? Math.random() : 0) + 'px';
+        if(wind != 0){var ss = Math.random() > Math.abs(wind*0.025) ? Math.random() : (wind > 0 ? 0 : 1) ;}else{var ss = Math.random()}
+        a.style.left = parseInt(box.style.width) * ss + 'px';
+        box.appendChild(a);
+        godown(a.id,a.id,8*Math.random());
+        i++;
+        all++;
+        var x = 100 * Math.random()* Math.random();
+        setTimeout('gogo()',x);
+    };
+    function removeElement(_element){//移除标签的函数
+        var _parentElement = _element.parentNode;
+        if(_parentElement){
+            _parentElement.removeChild(_element);
+        };
+    };
+    function godown(a,e,speed){
+        if(speed < 3){speed = 3}
+        var a1 =document.getElementById(a);
+        a1.style.top = parseInt(a1.style.top) + speed +'px';
+        if(parseInt(a1.style.top) < parseInt(box.style.height)){e = setTimeout("godown(\""+a+"\",\""+e+"\","+speed+")",20)}
+        else{
+            clearTimeout(e);
+            removeElement(a1);
+            speed=null;
+            other++;
+            document.getElementById('bbb').innerHTML = "区域内还有"+(all-other)+"个雪花点."
+        };
+    };
+    function wind_run(wind){
+        var a = document.getElementById("box").getElementsByTagName('div');
+        for(var i = 0;i<a.length;i++){
+            a[i].style.left = parseInt(a[i].style.left) + wind +'px';
+        };
+        if(Math.abs(wind) > 0.1){wind_time = setTimeout("wind_run("+wind+")",20)}
+        else{clearTimeout(wind_time);wind = 0;};
+    };
+    gogo();
+</script>
+</body>
+</html>

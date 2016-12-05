@@ -1,0 +1,623 @@
+    /*common*/
+html{
+    background: #999999;
+}
+body{
+    /*background: deepskyblue;*/
+    background: url(../img/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling : touch
+}
+#app{
+
+}
+.inline{
+    display: inline-block;
+}
+.float-right{
+    float: right;
+}
+.float-left{
+    float: left;
+}
+.flex{
+    display: flex;
+}
+.flex-1{
+    flex: 1;
+}
+
+.div-line{
+    border-bottom: 1px solid #ffffff;
+}
+.none{
+    display: none;
+}
+.show{
+    display: block;
+}
+/*common*/
+
+/*mainweather*/
+.mainweather{
+    width: 100%;
+    /*height: 6rem;*/
+    /*background: url(../img/bg1.jpg);*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*color: #fff;*/
+}
+.mainweather ul{
+    padding: 0.3rem;
+}
+
+.line1{
+    height: 1rem;
+}
+.maintime{
+    font-size: 0.4rem;
+}
+.mainplace{
+    font-size: 0.4rem;
+}
+
+.tem-wendubox{
+    text-align:center;
+    height: 4rem;
+    margin: 0 auto;
+
+}
+.dushu{
+    position: relative;
+    font-size:3rem;
+    text-align: center;
+}
+
+.dushudian{
+    font-size: 2rem;
+    position: absolute;
+    right: -1.8rem;
+    top:0;
+}
+.iconw-CLEAR_DAY{
+    background: url(../img/weathericon/CLEAR_DAY.png);
+}
+.iconw-CLEAR_NIGHT{
+    background: url(../img/weathericon/CLEAR_NIGHT.png);
+}
+.iconw-PARTLY_CLOUDY_DAY{
+    background: url(../img/weathericon/PARTLY_CLOUDY_DAY.png);
+}
+.iconw-PARTLY_CLOUDY_NIGHT{
+    background: url(../img/weathericon/PARTLY_CLOUDY_NIGHT.png);
+}
+.iconw-CLOUDY{
+    background: url(../img/weathericon/CLOUDY.png);
+}
+.iconw-RAIN{
+    background: url(../img/weathericon/RAIN.png);
+}
+.iconw-SNOW{
+    background: url(../img/weathericon/SNOW.png);
+}
+.iconw-WIND{
+    background: url(../img/weathericon/WIND.png);
+}
+.iconw-FOG{
+    background: url(../img/weathericon/FOG.png);
+}
+.iconw-HAZE{
+    background: url(../img/weathericon/HAZE.png);
+}
+.iconw-SLEET{
+    background: url(../img/weathericon/SLEET.png);
+}
+.iconwm{
+    width: 1rem;
+    height:1rem;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+}
+.iconw{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 0.8rem;
+    height:0.8rem;
+
+
+}
+.tem_level{
+    font-size: 0.5rem;
+}
+.tem-center{
+    width: 4.5rem;
+    height: 1rem;
+    margin: 0.5rem auto;
+    display: flex;
+}
+
+.icont{
+    height: 1rem;
+    line-height: 1rem;
+    display: inline-block;
+    flex: 1;
+    text-align: center;
+}
+.icheight{
+    flex: 1;
+    display: flex;
+}
+
+.tem-wendu{
+    height: 1rem;
+    line-height: 1rem;
+    flex: 1;
+    display: flex;
+}
+.margin—right-kongqi{
+    margin-right: 0.2rem;
+}
+.tem_bottom{
+    height: 0.5rem;
+}
+/*mainweather*/
+
+
+/*hourlytime*/
+.hourlytime .swiper-container {
+    width: 100%;
+    height: 1.9rem;
+    margin: 0.2rem auto;
+}
+.hourlytime .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /*background: #fff;*/
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.w-icon-ul{
+    width: 100%;
+    height: 100%;
+    font-size: 0.4rem;
+}
+.w-icon-clear-day{
+    background: url("../img/weathericon/small/CLEAR_DAY-small.png");
+}
+.w-icon-clear-night{
+    background: url("../img/weathericon/small/CLEAR_NIGHT-small.png");
+}
+.w-icon-cloudy-day{
+    background: url("../img/weathericon/small/PARTLY_CLOUDY_DAY-small.png");
+}
+.w-icon-cloudy-night{
+    background: url("../img/weathericon/small/PARTLY_CLOUDY_NIGHT-small.png");
+}
+.w-icon-cloud{
+    background: url("../img/weathericon/small/CLOUDY-small.png");
+}
+.w-icon-rain{
+    background: url("../img/weathericon/small/RAIN-small.png");
+}
+.w-icon-snow{
+    background: url("../img/weathericon/small/SNOW-small.png");
+}
+.w-icon-wind{
+    background: url("../img/weathericon/small/WIND-small.png");
+}
+.w-icon-fog{
+    background: url("../img/weathericon/small/FOG-small.png");
+}
+.w-icon-haze{
+    background: url("../img/weathericon/small/HAZE-small.png");
+}
+.w-icon-sleet{
+    background: url("../img/weathericon/small/SLEET-small.png");
+}
+
+/*w-icon-li放在w-icon-sun下面*/
+.w-icon-li{
+    background-repeat: no-repeat;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-size: cover;
+    margin: 0.2rem auto;
+}
+
+/*hourlytime*/
+
+/*xinzuo*/
+.xinzuo{
+    margin-top: 1rem;
+}
+.xinzuo .swiper-container {
+    width: 90%;
+    margin: 0.2rem auto;
+}
+.xinzuo .swiper-wrapper{
+
+}
+.xinzuo .swiper-slide {
+
+}
+
+.h-icon1{
+    background:url("../img/xinzuo/水瓶座.png");
+    border-radius: 0.2rem;
+
+}
+.h-icon2{
+    background:url("../img/xinzuo/双鱼座.png");
+    border-radius: 0.2rem;
+
+
+}
+.h-icon3{
+    background:url("../img/xinzuo/白羊座.png");
+    border-radius: 0.2rem;
+
+
+}
+.h-icon4{
+    background:url("../img/xinzuo/金牛座.png");
+    border-radius: 0.2rem;
+
+
+}
+.h-icon5{
+    background:url("../img/xinzuo/双子座.png");
+    border-radius: 0.2rem;
+
+
+}
+.h-icon6{
+    background:url("../img/xinzuo/巨蟹座.png");
+    border-radius: 0.2rem;
+
+
+}
+.h-icon7{
+    background:url("../img/xinzuo/狮子座.png");
+    border-radius: 0.2rem;
+
+
+}
+.h-icon8{
+    background:url("../img/xinzuo/处女座.png");
+    border-radius: 0.2rem;
+
+
+}
+.h-icon9{
+    background:url("../img/xinzuo/天秤座.png");
+    border-radius: 0.2rem;
+
+
+}
+.h-icon10{
+    background:url("../img/xinzuo/天蝎座.png");
+    border-radius: 0.2rem;
+
+
+}
+.h-icon11{
+    background:url("../img/xinzuo/射手座.png");
+    border-radius: 0.2rem;
+
+
+}
+.h-icon12{
+    background:url("../img/xinzuo/摩羯座.png");
+    border-radius: 0.2rem;
+
+
+}
+.h-icon{
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    border-radius: 0.1rem;
+
+}
+
+.xinzuotext{
+    padding: 0.1rem 0.15rem;
+}
+.prag{
+    text-indent: 0.6rem;
+    line-height: 0.5rem;
+    letter-spacing: 0.01rem;
+}
+.xinzuo_title{
+    margin: 0.2rem;
+}
+/**/
+
+    .starbox{
+        width: 100%;
+        display: block;
+        /*padding: 0.5rem 0.2rem;*/
+    }
+    .starbox table,tbody{
+        width: 100%;
+    }
+    .starbox td{
+        width: 50%;
+        padding: 0.1rem 0.2rem;
+    }
+    .starbox .start{
+        padding: 0.1rem 0;
+        float: left;
+        width: 35%;
+    }
+    .starbox div{
+        display: inline-block;
+    }
+    .starbox .starcon{
+        /*padding: 0.1rem 0;*/
+        float: left;
+        width: 50%;
+    }
+    .starmain{
+        float: left;
+        padding-left: 0.2rem;
+        display: inline-block;
+        background: url("../img/xinzuo/star.png");
+        background-repeat: no-repeat;
+        width: 60%;
+        height: 0.42rem;
+        background-size: cover;
+        margin-top: 0.1rem;
+    }
+    .star-0{
+        background-position: 0px 0px;
+    }
+    .star-1{
+        background-position: -0.6rem 0px;
+    }
+    .star-2{
+        background-position: -1.2rem 0px;
+    }
+    .star-3{
+        background-position: -1.8rem 0px;
+    }
+    .star-4{
+        background-position: -2.4rem 0px;
+    }
+    .star-5{
+        background-position: -3rem 0px;
+    }
+    .table{
+        display: table;
+    }
+    .stardet{
+        padding-left: 0.15rem;
+    }
+/**/
+/*ads*/
+.ads{
+    width: 100%;
+    height: 2rem;
+    margin: 0.2rem 0;
+}
+.ads img{
+    display: block;
+    height: 100%;
+    width: 90%;
+    margin: 0rem auto;
+}
+/*ads*/
+
+/*futureday*/
+.futureday{
+    margin: 0.2rem 0;
+    font-size: 0.4rem;
+}
+.futureday table{
+    width: 100%;
+}
+.futureday tr{
+    width: 100%;
+    display: flex;
+}
+.futureday td{
+    line-height: 0.6rem;
+    flex:1;
+}
+.futureday td:first-child{
+    padding-left: 0.2rem;
+}
+.futureday td:last-child span{
+    float: right;
+    padding-right: 0.4rem;
+    width: 0.5rem;
+    height: 0.5rem;
+}
+    .fu-icon-clear-day{
+        background: url("../img/weathericon/small/CLEAR_DAY-small.png");
+    }
+    .fu-icon-clear-night{
+        background: url("../img/weathericon/small/CLEAR_NIGHT-small.png");
+    }
+    .fu-icon-cloudy-day{
+        background: url("../img/weathericon/small/PARTLY_CLOUDY_DAY-small.png");
+    }
+    .fu-icon-cloudy-night{
+        background: url("../img/weathericon/small/PARTLY_CLOUDY_NIGHT-small.png");
+    }
+    .fu-icon-cloud{
+        background: url("../img/weathericon/small/CLOUDY-small.png");
+    }
+    .fu-icon-rain{
+        background: url("../img/weathericon/small/RAIN-small.png");
+    }
+    .fu-icon-snow{
+        background: url("../img/weathericon/small/SNOW-small.png");
+    }
+    .fu-icon-wind{
+        background: url("../img/weathericon/small/WIND-small.png");
+    }
+    .fu-icon-fog{
+        background: url("../img/weathericon/small/FOG-small.png");
+    }
+    .fu-icon-haze{
+        background: url("../img/weathericon/small/HAZE-small.png");
+    }
+    .fu-icon-sleet{
+        background: url("../img/weathericon/small/SLEET-small.png");
+    }
+.fu-icon {
+    background-repeat: no-repeat;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-size: cover;
+    margin: 0rem auto;
+}
+
+/*futureday*/
+
+/*joke*/
+.joke{
+    width: 100%;
+    margin: 0.2rem 0;
+}
+.joke_title{
+    margin: 0.2rem;
+}
+.joke-content{
+    text-indent: 0.6rem;
+    line-height: 0.5rem;
+    letter-spacing: 0.01rem;
+    padding: 0.2rem 0.3rem;
+}
+
+
+/*demo*/
+.blue-slide {
+    background: #4390EE;
+}
+#swiper-container1 .swiper-slide {
+    color: #fff;
+    line-height: 300px;
+    text-align: center;
+    font-size: 50px;
+}
+.red-slide {
+    background: #CA4040;
+}
+.orange-slide {
+    background: #FF8604;
+}
+/*demo*/
+
+/*funtureline*/
+.futureline{
+    width: 100%;
+}
+
+#canvass{
+    width: 10rem;
+    height: 6rem;
+}
+/*funtureline*/
+
+
+
+/*/*/
+
+.featured {
+    height:4.2rem;
+    /*padding: 20px 0 50px;*/
+    /*margin-bottom: -25px;*/
+    /*background-color: #aaa;*/
+    /*background-image: -webkit-gradient(linear, left top, left bottom, from(#aaa), to(#eeeeee));*/
+    /*background-image: -webkit-linear-gradient(top, #aaa, #eeeeee);*/
+    /*background-image:    -moz-linear-gradient(top, #aaa, #eeeeee);*/
+    /*background-image:      -o-linear-gradient(top, #aaa, #eeeeee);*/
+    /*background-image:         linear-gradient(to bottom, #aaa, #eee);*/
+}
+.featured .swiper-slide {
+    border-radius: 5px;
+    height: 2.7rem;
+    width: 3.7rem;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /*-webkit-box-reflect: below 1px -webkit-linear-gradient(bottom, rgba(0,0,0,0.5) 0px, rgba(0,0,0,0) 20px);*/
+}
+
+/*futureday1*/
+    .fdboxb{
+        margin: 0.2rem 0;
+    }
+
+    .fdimg-icon-clear-day{
+        background: url("../img/weathericon/small/CLEAR_DAY-small.png");
+    }
+    .fdimg-icon-clear-night{
+        background: url("../img/weathericon/small/CLEAR_NIGHT-small.png");
+    }
+    .fdimg-icon-cloudy-day{
+        background: url("../img/weathericon/small/PARTLY_CLOUDY_DAY-small.png");
+    }
+    .fdimg-icon-cloudy-night{
+        background: url("../img/weathericon/small/PARTLY_CLOUDY_NIGHT-small.png");
+    }
+    .fdimg-icon-cloud{
+        background: url("../img/weathericon/small/CLOUDY-small.png");
+    }
+    .fdimg-icon-rain{
+        background: url("../img/weathericon/small/RAIN-small.png");
+    }
+    .fdimg-icon-snow{
+        background: url("../img/weathericon/small/SNOW-small.png");
+    }
+    .fdimg-icon-wind{
+        background: url("../img/weathericon/small/WIND-small.png");
+    }
+    .fdimg-icon-fog{
+        background: url("../img/weathericon/small/FOG-small.png");
+    }
+    .fdimg-icon-haze{
+        background: url("../img/weathericon/small/HAZE-small.png");
+    }
+    .fdimg-icon-sleet{
+        background: url("../img/weathericon/small/SLEET-small.png");
+    }
+.fdimg{
+    background-repeat: no-repeat;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-size: cover;
+    margin: 0.1rem auto;
+    display: block;
+}
+.fdboxb li{
+    text-align: center;
+    /*height: 0.5rem;*/
+    line-height: 0.5rem;
+    width: 100%;
+    font-size: 0.3rem;
+}
+/*futureday1*/
